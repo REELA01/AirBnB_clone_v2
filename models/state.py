@@ -10,10 +10,7 @@ import shlex
 
 
 class State(BaseModel, Base):
-    """This is the class for State
-    Attributes:
-        name: input name
-    """
+    """the class for State"""
     __tablename__ = "states"
     name = Column(String(128), nullable=False)
     cities = relationship("City", cascade='all, delete, delete-orphan',
