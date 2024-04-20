@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/cities_by_states', strict_slashes=False)
 def cities_by_states():
-    """display states and cities in order"""
+    """display all states and cities in order"""
     states = storage.all("State").values()
     return render_template('8-cities_by_states.html', states=states)
 
